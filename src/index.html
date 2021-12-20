@@ -9,19 +9,22 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body>
+  <body onclick="myFunction()">
     <div class="main">
       <div class="emoji mb-6">💣🤯💥</div>
       <button class="button">Boom?</button>
     </div>
 
     <script>
-      document.querySelector("body");
+      const article = document.createElement("ARTICLE");
 
-      var article = document.createElement("ARTICLE");
-      article.classList.add(".message");
-      document.body.appendChild(article);
-      console.log(article);
+      function myFunction() {
+        article.classList.add(".message");
+        var t = document.createTextNode("Hello World");
+        article.appendChild(t);
+        document.body.appendChild(article);
+        console.log(article);
+      }
     </script>
   </body>
 </html>
